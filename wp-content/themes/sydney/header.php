@@ -153,7 +153,7 @@ if(!$_SESSION['urli']) {
 <!--                    </div>-->
                 </div>
                 <h2 id="goto-from-top-button" class="tour-header">Лучшие Цены на&nbsp;Туры по&nbsp;направлениям</h2>
-                <div class="filters">
+                <div id="filt" class="filters">
                     <select id="country-select" class="select-spec" style="margin-right: 20px;
                                   margin-left: 25px;">
                         <option value="country-default" selected>Выберите страну</option>
