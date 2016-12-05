@@ -6821,3 +6821,7 @@ a.back-to-main1 {
 #slideshow {
    max-height: 1080px !important;
 }
+
+#mainnav .menu-fallback {
+    opacity: 0;
+}

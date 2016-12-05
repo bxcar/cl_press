@@ -10,7 +10,7 @@
 <p class="prices-info">Стоимость указана
     на одного при двухместном размещении. Все сборы уже включены в стоимость! По некоторым направлениям необходимо
     открытие визы. Цены реальные, но места заканчиваются</p>
-<p class="get-offers-button"><a class="btn1 modal-link product-link" href="/спецпредложения/"
+<p class="get-offers-button"><a onclick="get_all_button();" class="popmake-form_for_special btn1 modal-link product-link"
                                 data-order="Получить все предложения">Получить все предложения</a></p>
 
 <div class="prev">

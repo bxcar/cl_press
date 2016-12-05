@@ -91,7 +91,8 @@ session_start();
                 $p = trim(strip_tags($_POST['target'], '<br>'))
                     . trim(strip_tags($_POST['target-manager'], '<br>'))
                     . trim(strip_tags($_POST['callback'], '<br>'))
-                    . trim(strip_tags($_POST['order'], '<br>'));
+                    . trim(strip_tags($_POST['order'], '<br>'))
+                    . trim(strip_tags($_POST['get_all_spec'], '<br>'));
 
 //                global $urli;
                 $url =  'http://'.$_SERVER['HTTP_HOST'].$_SESSION['urli'];
@@ -164,4 +165,3 @@ session_start();
                 ?>
 
 
-                

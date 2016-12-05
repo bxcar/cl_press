@@ -187,44 +187,4 @@ AND pmet.meta_value = p.id";
     }
 } ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php if (has_post_thumbnail() && (get_theme_mod('index_feat_image') != 1)) : ?>
-        <div class="entry-thumb" style="position: relative;">
-            <?php the_meta(); ?>
-<!--            <span class="discount-amount">-75%</span>-->
-<!--            <img class="discount-image" src="/wp-content/themes/sydney/img/discount.png">-->
-            <span class="custom-size" href="<?php the_permalink(); ?>"
-               title="<?php the_title(); ?>"><?php the_post_thumbnail('sydney-large-thumb'); ?></span>
-        </div>
-    <?php endif; ?>
-
-    <header class="entry-header">
-        <?php the_title(sprintf('<h2 class="title-post"><span id="country-title" class="country-title-class" style="color: #0088e7;" href="%s" rel="bookmark">', esc_url(get_permalink())), '</span></h2>'); ?>
-
-    </header><!-- .entry-header -->
-
-    <div class="entry-post">
-        <?php if ((get_theme_mod('full_content_home') == 1 && is_home()) || (get_theme_mod('full_content_archives') == 1 && is_archive())) : ?>
-            <?php the_content(); ?>
-        <?php else : ?>
-            <?php the_content(); ?> <!--the_excerpt();-->
-        <?php endif; ?>
-
-        <?php
-        wp_link_pages(array(
-            'before' => '<div class="page-links">' . __('Pages:', 'sydney'),
-            'after' => '</div>',
-        ));
-        ?>
-    </div><!-- .entry-post -->
-
-    <footer class="entry-footer">
-        <div class="tprice">
-            <div>от <strong><b><?php the_tags('<style>b a {color: #0088e7;}</style>'); ?></b></strong> $</div>
-            <img style="display: none;" id="im" src="/wp-content/themes/sydney/img/icons/privilege2.png">
-            <a id="order-special-button" onclick="addhotel(this);" rel="fancybox" href="#" class="popmake-form_for_special btnprice modal-link product-link"
-               data-order="AMC Royal Hotel 5*" country="Египет">Заказать</a>
-        </div>
-    </footer><!-- .entry-footer -->
-</article><!-- #post-## -->
