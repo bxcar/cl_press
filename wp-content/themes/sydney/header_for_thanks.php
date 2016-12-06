@@ -68,7 +68,7 @@ session_start();
                         </nav><!-- #site-navigation -->
                     </div>
                     <div class="col-md-8 col-sm-4 col-xs-12 header-number">
-                        <p <!--style="overflow: hidden;-->">098 11 69 555<br><a href="#"><span
+                        <p <!--style="overflow: hidden;-->">096 595 01 01<br><a href="#"><span
                                 class="popmake-522 header-number-text">Закажите&nbsp;обратный&nbsp;звонок</span></a>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ session_start();
 
                     // Формирование заголовка письма
 
-                $subject = '[Новая заявка - Coral Travel г. Борисполь]';
+                $subject = '[Новая заявка - Coral Travel Троещина]';
 //                $headers  = "From: ".$name." \r\n";
 //                $headers .= "Reply-To: ". strip_tags($name) . "\r\n";
 //                $headers .= "MIME-Version: 1.0\r\n";
@@ -107,7 +107,7 @@ session_start();
 
                 // Формирование тела письма
                 $msg  = "<html><body style='font-family:Arial,sans-serif;'>";
-                $msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Новая заявка - Coral Travel г. Борисполь</h2>\r\n";
+                $msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Новая заявка - Coral Travel Троещина</h2>\r\n";
                 $msg .= "<p><strong>Имя:</strong> " . $name . "</p>\r\n";
                 $msg .= "<p><strong>Телефон:</strong> " . $phone . "</p>\r\n";
                 if($_POST['your-message']) {

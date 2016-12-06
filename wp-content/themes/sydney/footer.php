@@ -60,7 +60,7 @@
                 <p class="team-tel">+38 099 213-95-55<br><span style="font-size: 12px">(Viber, WhatsApp)</span></p>
                 <!--<p class="viber-whatsapp"><span>(Viber, WhatsApp)</span> +38 099 213-95-55</p>-->
 
-                <p class="team-mail">info@coralborispol.com</p>
+                <p class="team-mail">info@makintour.com</p>
 
 
                 <p class="team-year">7 лет в туризме</p>
@@ -80,7 +80,7 @@
                 <p class="team-tel">+38 099 213-95-55<br><span style="font-size: 12px">(Viber, WhatsApp)</span></p>
                 <!--<p class="viber-whatsapp"><span>(Viber, WhatsApp)</span> +38 099 213-95-55</p>-->
 
-                <p class="team-mail">info@coralborispol.com</p>
+                <p class="team-mail">info@makintour.com</p>
 
                 <p class="team-year">12 лет в туризме</p>
 
@@ -98,7 +98,7 @@
                 <p class="team-tel">+38 099 213-95-55<br><span style="font-size: 12px">(Viber, WhatsApp)</span></p>
                 <!--<p class="viber-whatsapp"><span>(Viber, WhatsApp)</span> +38 099 213-95-55</p>-->
 
-                <p class="team-mail">info@coralborispol.com </p>
+                <p class="team-mail">info@makintour.com</p>
 
                 <p class="team-year">6 лет в туризме</p>
 
@@ -117,7 +117,7 @@
     <img id="palmleft" src="/wp-content/themes/sydney/img/palmleft.png">
     <div class="grid">
         <p class="telephone2"><span>Есть вопрос по отдыху? С&nbsp;удовольствием поможем:</span>
-            +38 098 11 69 555 </p>
+            +38 096 595 01 01</p>
         <h3> Время обработки заявок</h3>
         <p class="dates">Пн-Вс: 9.00 - 20.00<br/><br/>
             <span class="prefooter">Если вы оставите заявку в другое время, мы обязятельно перезвоним в рабочее время офиса</span>
@@ -125,7 +125,7 @@
     </div>
 </section>
 <h2 class="header-bottom-form">Мы гарантируем <span>ЛУЧШИЕ&nbsp;цены</span> на туры <!--<br/>-->
-    в Борисполе</h2>
+    на Троещине</h2>
 <div id="content" class="page-wrap" style="padding-top: 30px; padding-bottom: 0;">
     <div class="container content-wrapper">
         <div class="row">
@@ -226,15 +226,15 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="grid foot">
-        <p class="f-text1 box">ООО «ХОРОШЕЕ АГЕНТСТВО» <br/>
-            ЕГРПОУ: 39818659 <br/>
+        <p class="f-text1 box">ООО «МАКИНТУР» <br/>
+            ЕГРПОУ: 36480659 <br/>
             <a class="popmake-515" href="#">Платежная информация</a><br/>
-            моб. +38 098 11 69 555
+            моб. +38 096 595 01 01
         </p>
 
         <p class="f-text2 box">г.&nbsp;Борисполь, <br/>
-            ул.&nbsp;Киевский шлях, 2/6, <br/>ТРЦ «АЕРОМОЛ»<br>
-            <span>e-mail:</span> info@coralborispol.com</p>
+            ул.&nbsp;Киевский шлях, 76-а, <br/>офис 97<br>
+            <span>e-mail:</span> info@makintour.com</p>
 
         <p class="f-text3 box">
             <a class="popmake-158 modal-link" href="#">Соглашение об обработке персональных данных.</a><br/>

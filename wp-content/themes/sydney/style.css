@@ -1223,7 +1223,7 @@ Mobile navigation
 }
 
 .btn-menu:before {
-    content: "\f0c9";
+    /*content: "\f0c9";*/
 }
 
 .btn-submenu {
@@ -1620,6 +1620,7 @@ Blog
 
 .content-area .hentry {
     width: 23%;
+    /*max-width: 275px;*/
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -3819,6 +3820,12 @@ input[type="color"]:focus {
     }
 }
 
+@media (min-width: 1200px) {
+    .container {
+         width: 1220px !important;
+    }
+}
+
 /* Smaller than standard 1200 */
 @media only screen and (max-width: 1199px) {
     #popmake-129,
@@ -4303,9 +4310,15 @@ input[type="color"]:focus {
         height: 50px !important;
     }
     #load {
-        background-size: 15% !important;
-        left: 42% !important;
+        background-size: 80% !important;
+        margin-left: 10% !important;
+        /*left: 42% !important;*/
     }
+
+    .fon-class {
+        height: 150px;
+    }
+
 
     .header-number-text {
         border: 1px solid #fff;
@@ -6370,9 +6383,9 @@ p {
 #fon {
     display: none;
     opacity: 0.8;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
     z-index: 100;
     background-color: white;
 }
@@ -6380,13 +6393,27 @@ p {
 #load {
     background: url('/wp-content/themes/sydney/img/ajax-loader.gif') no-repeat;
     /*background-size: 50%;*/
-    position: fixed;
-    left: 44%;
-    top: 50%;
+    /*position: fixed;*/
+    /*left: 44%;*/
+    /*top: 50%;*/
     width: 100%;
     height: 100%;
     z-index: 150;
     display: none;
+}
+
+.load-class {
+    position:static;
+    margin-left: 30%;
+    margin-top: 50%;
+}
+
+.fon-class {
+    position: relative;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
 }
 
 .prices img {
