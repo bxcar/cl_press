@@ -55,15 +55,15 @@
         <div class="team-item box">
             <div class="team-img Dunai"></div>
             <div class="team-info">
-                <h3>Вознюк Адриана</h3>
+                <h3>Иванченко Елена</h3>
 
-                <p class="team-tel">+38 099 213-95-55<br><span style="font-size: 12px">(Viber, WhatsApp)</span></p>
+                <p class="team-tel">+38 096 711-01-01<br><span style="font-size: 12px">(Viber, WhatsApp)</span></p>
                 <!--<p class="viber-whatsapp"><span>(Viber, WhatsApp)</span> +38 099 213-95-55</p>-->
 
-                <p class="team-mail">info@makintour.com</p>
+                <p class="team-mail">kiev2@makintour.com</p>
 
 
-                <p class="team-year">7 лет в туризме</p>
+                <p class="team-year">1 год в туризме</p>
 
                 <a href="#" class="popmake-129 modal-link product-link img-link"
                    data-order="Проверьте нас (Наталия)"
@@ -75,14 +75,14 @@
             <div class="team-img Desyatnik">
             </div>
             <div class="team-info">
-                <h3>Легкая Людмила</h3>
+                <h3>Богуцкая Татьяна</h3>
 
-                <p class="team-tel">+38 099 213-95-55<br><span style="font-size: 12px">(Viber, WhatsApp)</span></p>
+                <p class="team-tel">+38 096 711-01-01<br><span style="font-size: 12px">(Viber, WhatsApp)</span></p>
                 <!--<p class="viber-whatsapp"><span>(Viber, WhatsApp)</span> +38 099 213-95-55</p>-->
 
-                <p class="team-mail">info@makintour.com</p>
+                <p class="team-mail">kiev2@makintour.com</p>
 
-                <p class="team-year">12 лет в туризме</p>
+                <p class="team-year">2 года в туризме</p>
 
                 <a href="#" class="popmake-599 modal-link product-link img-link"
                    data-order="Проверьте нас (Владимир)"
@@ -93,14 +93,14 @@
         <div class="team-item box">
             <div class="team-img Chorna"></div>
             <div class="team-info">
-                <h3>Тютюн Анна</h3>
+                <h3>Мороз Наталья</h3>
 
-                <p class="team-tel">+38 099 213-95-55<br><span style="font-size: 12px">(Viber, WhatsApp)</span></p>
+                <p class="team-tel">+38 096 711-01-01<br><span style="font-size: 12px">(Viber, WhatsApp)</span></p>
                 <!--<p class="viber-whatsapp"><span>(Viber, WhatsApp)</span> +38 099 213-95-55</p>-->
 
-                <p class="team-mail">info@makintour.com</p>
+                <p class="team-mail">kiev2@makintour.com</p>
 
-                <p class="team-year">6 лет в туризме</p>
+                <p class="team-year">1 год в туризме</p>
 
                 <a href="#" class="popmake-597 modal-link product-link img-link"
                    data-order="Проверьте нас (Юлия)"

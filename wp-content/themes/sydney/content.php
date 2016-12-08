@@ -148,6 +148,7 @@ AND pmet.meta_value = p.id";
             $result = mysqli_query($db, $sql) or die(mysqli_error($db));
             $result1 = mysqli_query($db, $sql1) or die(mysqli_error($db));
             $result2 = mysqli_query($db, $sql2) or die(mysqli_error($db));
+            $count_for_unic = 0;
             for ($i = 0; $i < mysqli_num_rows($result); $i++) {
                 $goods[$i] = mysqli_fetch_assoc($result);
                 $goods_img[$i] = mysqli_fetch_assoc($result1);
@@ -161,10 +162,21 @@ AND pmet.meta_value = p.id";
                     $count = 0;
                     foreach ($goods as $value) {
                         if ($value['post_title'] == $goods[$i]['post_title']) {
-                            $unic[$count] = $goods[$i];
                             $count++;
+                            $unic[$count_for_unic] = $goods[$i];
+                            $count_for_unic++;
                         }
                     }
+//                    print_r ($unic);
+                    /*$length_unic = count($unic);
+                    foreach ($unic as $value) {
+                        for ($ix = 0; $ix < $length_unic; $ix++) {
+                            if ($value['post_title'] == $goods[$i]['post_title']) {
+                                unset($unic[$ix]);
+                            }
+                        }
+                    }*/
+
                     if ($count > 1) {
                         if (isset($goods[$i])) {
                             unset($goods[$i]);
@@ -172,7 +184,32 @@ AND pmet.meta_value = p.id";
                     }
                 }
             }
-//            print_r(array_unique($unic));
+//            print_r ($unic);
+            
+            /*printf("\nRepeated elements:\n");
+            for($iq=0,$tmp=0; $iq<count($unic)-1; $iq++){
+                if ($unic[$iq]['post_title']==$unic[$iq+1]['post_title']) {
+                    print_r($unic[$iq]);
+                    for($jq=($iq+1); $jq<count($unic) && $unic[$jq]['post_title']==$unic[$iq]['post_title']; $jq++){
+                        $tmp++;
+                        print_r($unic[$jq]);
+                    }
+                    $iq=$jq-1;
+                }
+            }*/
+
+//            $unic_chek = $unic;
+           /* foreach ($unic as $item) {
+                foreach ($unic_chek as $item_check) {
+                    if($item != $item_check)
+                }
+            }*/
+            /*for($ix = 0; $ix < count($unic); $ix++) {
+                foreach ($unic as $item) {
+                    if($item != )
+                }
+            }*/
+//            print_r ($unic);
             return $goods;
         }
 
