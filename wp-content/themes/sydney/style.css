@@ -3877,10 +3877,17 @@ input[type="color"]:focus {
 
     .header-number {
         width: 14% !important;
+        margin-top: -15px;
+    }
+
+    .float-header .header-number {
+        width: 14% !important;
+        margin-top: -5px;
     }
 
     .header-number p {
         text-align: left;
+        margin-top: 7px;
         color: #ffffff;
         font-size: 16px !important;
         font-family: 'Open Sans', sans-serif;
@@ -4007,7 +4014,7 @@ input[type="color"]:focus {
     }*/
     .header-number p {
         /*font-size: 16px !important;*/
-        margin-top: -12px !important;
+        /*margin-top: -12px !important;*/
         margin-left: -75px !important;
     }
 
@@ -4539,7 +4546,7 @@ input[type="color"]:focus {
 
     .header-number p {
         /*font-size: 16px !important;*/
-        margin-top: -2px !important;
+        margin-top: 15px !important;
         margin-left: -20px !important;
     }
 
