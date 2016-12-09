@@ -28,7 +28,7 @@ if (!$_GET['sort_id'])
                 $goods[$i]['post_id'] = $goods_discount[$i]['post_id'];*/
                 $select_total[$i + 1] = $select[$i]['post_title'];
             }
-            return $select_total;
+            return array_unique($select_total);
         }
 
         $select_total = get_select_option($db, $id);
@@ -130,25 +130,19 @@ AND pmet.meta_value = p.id";
                             AND pmet.meta_value = p.id
                             AND (SELECT p.id FROM wp_posts po WHERE po.id = p.post_parent)
                             ORDER BY cast(p.post_parent AS UNSIGNED) DESC";
-                    /*t.term_id=tx.term_id
-                    AND*/
-                    /*AND tx.taxonomy='post_tag'
-                    AND tx.term_taxonomy_id=r.term_taxonomy_id
-                    AND r.object_id=p.id*/
-//                AND (SELECT p.guid FROM wp_posts po WHERE po.post_title = '$id' AND po.id = p.post_parent)
-//                $sql1 .= " ORDER BY p.post_date DESC";
+
                 } else {
                     $sql1 = $sql_for_country_image . " AND (SELECT p.id FROM wp_posts po WHERE po.post_title = '$id' AND po.id = p.post_parent)";
                 }
             }
-            $unic = array();
             $goods = array();
+            $goods_min_price_total = array();
             $goods_img = array();
             $goods_discount = array();
             $result = mysqli_query($db, $sql) or die(mysqli_error($db));
             $result1 = mysqli_query($db, $sql1) or die(mysqli_error($db));
             $result2 = mysqli_query($db, $sql2) or die(mysqli_error($db));
-            $count_for_unic = 0;
+
             for ($i = 0; $i < mysqli_num_rows($result); $i++) {
                 $goods[$i] = mysqli_fetch_assoc($result);
                 $goods_img[$i] = mysqli_fetch_assoc($result1);
@@ -156,60 +150,104 @@ AND pmet.meta_value = p.id";
                 $goods[$i]['guid'] = $goods_img[$i]['guid'];
                 $goods[$i]['discount'] = $goods_discount[$i]['meta_value'];
                 $goods[$i]['post_id'] = $goods_discount[$i]['post_id'];
-//                $unic[$i] = $goods[$i]['post_title'];
 
-                if($id == 'Все страны' or $id == 'price-default') {
-                    $count = 0;
-                    foreach ($goods as $value) {
-                        if ($value['post_title'] == $goods[$i]['post_title']) {
-                            $count++;
-                            $unic[$count_for_unic] = $goods[$i];
-                            $count_for_unic++;
-                        }
-                    }
-//                    print_r ($unic);
-                    /*$length_unic = count($unic);
-                    foreach ($unic as $value) {
-                        for ($ix = 0; $ix < $length_unic; $ix++) {
-                            if ($value['post_title'] == $goods[$i]['post_title']) {
-                                unset($unic[$ix]);
-                            }
+                if ($id == 'Все страны' or $id == 'price-default') {
+
+                    /*if ($value['name'] > $goods[$i]['name']) {
+                        if (isset($goods[$i])) {
+                            unset($goods[$i]);
                         }
                     }*/
 
-                    if ($count > 1) {
+                    /*if ($count > 1) {
                         if (isset($goods[$i])) {
                             unset($goods[$i]);
+                        }
+                    }*/
+                    $dfd = 0;
+                    foreach ($goods as $value) {
+                        $goods_min_price = array();
+                        $count_goods_min = 0;
+                        foreach ($goods as $item) {
+                            if (($item['post_title'] == $value['post_title'])) {
+                                $goods_min_price[$count_goods_min] = $item;
+                                $count_goods_min++;
+                            }
+                        }
+
+                        $min_country_price = array();
+                        foreach ($goods_min_price as $value_1) {
+                            foreach ($goods_min_price as $item) {
+                                if (($item['name'] < $value_1['name'])) {
+                                    $min_country_price[0] = $item;
+                                }
+                            }
+                        }
+
+                        $goods_min_price_total[$dfd] = $min_country_price[0];
+                        if ($dfd == 8) {
+                        }
+
+                        $dfd++;
+                    }
+
+                    /*printf("\nRepeated elements:\n");
+                    for($iq=0,$tmp=0; $iq<count($unic)-1; $iq++){
+                        if ($unic[$iq]['post_title']==$unic[$iq+1]['post_title']) {
+                            print_r($unic[$iq]);
+                            for($jq=($iq+1); $jq<count($unic) && $unic[$jq]['post_title']==$unic[$iq]['post_title']; $jq++){
+                                $tmp++;
+                                print_r($unic[$jq]);
+                            }
+                            $iq=$jq-1;
+                        }
+                    }*/
+
+                    $count_for_price_total_total = count($goods_min_price_total);
+                    for ($iy = 0; $iy < $count_for_price_total_total; $iy++) {
+                        $count_for_price_total = 0;
+                        foreach ($goods_min_price_total as $item) {
+                            /* print_r ($item);
+                             echo "<br><br><br>";*/
+                            if ($item['post_title'] == $goods_min_price_total[$iy]['post_title']) {
+                                $count_for_price_total++;
+                                if ($count_for_price_total > 1) {
+                                    if (isset($goods_min_price_total[$iy])) {
+                                        unset($goods_min_price_total[$iy]);
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
-//            print_r ($unic);
-            
-            /*printf("\nRepeated elements:\n");
-            for($iq=0,$tmp=0; $iq<count($unic)-1; $iq++){
-                if ($unic[$iq]['post_title']==$unic[$iq+1]['post_title']) {
-                    print_r($unic[$iq]);
-                    for($jq=($iq+1); $jq<count($unic) && $unic[$jq]['post_title']==$unic[$iq]['post_title']; $jq++){
-                        $tmp++;
-                        print_r($unic[$jq]);
-                    }
-                    $iq=$jq-1;
-                }
-            }*/
 
-//            $unic_chek = $unic;
-           /* foreach ($unic as $item) {
-                foreach ($unic_chek as $item_check) {
-                    if($item != $item_check)
+
+            if ($id == 'Все страны' or $id == 'price-default') {
+                $count_for_price_total_result = count($goods_min_price_total);
+//                $goods_min_price_total = array_slice($goods_min_price_total,0,8);
+                for ($i = 0; $i <= $count_for_price_total_result * 10; $i++) {
+//                    echo $goods_min_price_total[$i]['post_title'];
+                    if (($goods_min_price_total[$i]['post_title'] == 'ОАЕ')
+                        || ($goods_min_price_total[$i]['post_title'] == 'Шри-Ланка')
+                        || ($goods_min_price_total[$i]['post_title'] == 'Таиланд')
+                        || ($goods_min_price_total[$i]['post_title'] == 'Египет')
+                        || ($goods_min_price_total[$i]['post_title'] == 'Мальдивы')
+                        || ($goods_min_price_total[$i]['post_title'] == 'Доминикана')
+                        || ($goods_min_price_total[$i]['post_title'] == 'Индия')
+                        || ($goods_min_price_total[$i]['post_title'] == 'Танзания')
+                    ) {
+                    } else {
+                        if (isset($goods_min_price_total[$i])) {
+                            unset($goods_min_price_total[$i]);
+                        }
+                    }
                 }
-            }*/
-            /*for($ix = 0; $ix < count($unic); $ix++) {
-                foreach ($unic as $item) {
-                    if($item != )
-                }
-            }*/
-//            print_r ($unic);
+                return $goods_min_price_total;
+            }
+
+//                print_r ($goods_min_price_total);
+
             return $goods;
         }
 
