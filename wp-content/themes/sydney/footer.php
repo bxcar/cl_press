@@ -64,7 +64,7 @@
                 <p class="team-mail">kiev2@makintour.com</p>
 
 
-                <p class="team-year">1 год в туризме</p>
+<!--                <p class="team-year">1 год в туризме</p>-->
 
                 <a href="#" class="popmake-129 modal-link product-link img-link"
                    data-order="Проверьте нас (Наталия)"
@@ -84,7 +84,7 @@
 
                 <p class="team-mail">kiev2@makintour.com</p>
 
-                <p class="team-year">2 года в туризме</p>
+<!--                <p class="team-year">2 года в туризме</p>-->
 
                 <a href="#" class="popmake-599 modal-link product-link img-link"
                    data-order="Проверьте нас (Владимир)"
@@ -103,7 +103,7 @@
 
                 <p class="team-mail">kiev2@makintour.com</p>
 
-                <p class="team-year">1 год в туризме</p>
+<!--                <p class="team-year">1 год в туризме</p>-->
 
                 <a href="#" class="popmake-597 modal-link product-link img-link"
                    data-order="Проверьте нас (Юлия)"
@@ -246,6 +246,23 @@
         </p>
     </div>
 </footer><!-- #colophon -->
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_URL =>
+            'http://api.u-on.ru/du4A1ZlNnyLIr90Af17E/lead/create.json',
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS =>
+            'source='.urlencode('заявка с сайта "Coral_Troieschyna"').
+            '&u_name='.urlencode($_POST['your-name']).
+            '&u_phone='.urlencode($_POST['tel-564'])
+    ));
+    $resp = curl_exec($curl);
+    curl_close($curl);
+}
+?>
 <?php wp_footer(); ?>
 </div><!-- #page -->
 </body>
