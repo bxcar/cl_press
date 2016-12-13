@@ -14,8 +14,8 @@ if(!$_SESSION['urli']) {
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <title>Coral Travel - г. Борисполь</title>
-    <meta name="description" content="Горящие туры в Египет, Таиланд и другие страны">
+    <title>Горящие туры на Троещине - Coral Travel</title>
+    <meta name="description" content="Бронирование тура, авиаперелеты, экскурсионные туры из Троещины. Гарантия надежности!">
     <script src="/wp-content/themes/sydney/js/script_for_form_button.js"></script>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
