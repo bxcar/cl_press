@@ -288,7 +288,7 @@ AND pmet.meta_value = p.id";
                         ?>
                         <?php if ($result_sql_disc_final['meta_value']) { ?>
                             <img class="discount-image" src="/wp-content/themes/sydney/img/discount.png">
-                            <span style="right: 3%; top: 5%;"
+                            <span style="right: 4%; top: 5.9%;"
                                   class="discount-amount"><?= $result_sql_disc_final['meta_value'] ?></span>
                             <?php
                         }

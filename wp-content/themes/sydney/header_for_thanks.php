@@ -82,6 +82,24 @@ session_start();
             <div class="row">
 
                 <?php
+                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    $curl = curl_init();
+                    curl_setopt_array($curl, array(
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_URL =>
+                            'http://api.u-on.ru/du4A1ZlNnyLIr90Af17E/lead/create.json',
+                        CURLOPT_POST => true,
+                        CURLOPT_POSTFIELDS =>
+                            'source='.urlencode('заявка с сайта "Coral_Troieschyna"').
+                            '&u_name='.urlencode($_POST['your-name']).
+                            '&u_phone='.urlencode($_POST['tel-564'])
+                    ));
+                    $resp = curl_exec($curl);
+                    curl_close($curl);
+                }
+                ?>
+
+                <?php
                 $sendto  = 'malanchukdima@mail.ru'; //Адреса, куда будут приходить письма shakrov@ukr.net, seo@makintour.com
                 //$sendto = 'seo@makintour.com, info@coralborispol.com'; //Адреса, куда будут приходить письма
 
