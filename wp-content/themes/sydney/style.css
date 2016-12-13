@@ -1494,6 +1494,10 @@ Hero section
     margin-left: -20%;
 }
 
+.text-slider-new .maintitle:after {
+    background-color: transparent;
+}
+
 .text-slider .subtitle {
     font-size: 30px;
     line-height: 40px;
@@ -3607,6 +3611,10 @@ input[type="color"]:focus {
 
 .text-slider .maintitle:after {
     background-color: #d65050;
+}
+
+.text-slider-new .maintitle:after {
+    background-color: transparent !important;
 }
 
 .content-area .hentry:after {

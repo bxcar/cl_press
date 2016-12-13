@@ -54,6 +54,8 @@ function getURLParameter(name) {
     if(multi[0]){
       ab_title=multi[0].val;
       jQuery("h1").html(ab_title);
+      jQuery(".subtitle-none").html('');
+      jQuery(".text-slider-none").addClass('text-slider-new');
     }
   }
 

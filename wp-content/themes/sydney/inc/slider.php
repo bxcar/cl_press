@@ -49,9 +49,9 @@ function sydney_slider_template() {
                     ?>
                     <div class="overlay-main"></div>
                         <div class="slide-inner">
-                            <div class="contain animated fadeInRightBig text-slider">
-                                <h1 id="multi-title" class="maintitle"><?php echo esc_html($slider_title_1); ?></h1>
-                                <p class="subtitle"><?php echo esc_html($slider_subtitle_1); ?></p>
+                            <div class="contain animated fadeInRightBig text-slider text-slider-none">
+                                <h1 id="multi-title" class="maintitle maintitle-none"><?php echo esc_html($slider_title_1); ?></h1>
+                                <p class="subtitle subtitle-none"><?php echo esc_html($slider_subtitle_1); ?></p>
                             </div>
                             <?php sydney_slider_button(); ?>
                         </div>
