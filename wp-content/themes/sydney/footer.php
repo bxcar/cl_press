@@ -122,7 +122,8 @@
         <p class="telephone2"><span>Есть вопрос по отдыху? С&nbsp;удовольствием поможем:</span>
             +38 096 595 01 01</p>
         <h3> Время обработки заявок</h3>
-        <p class="dates">Пн-Вс: 9.00 - 20.00<br/><br/>
+        <p style="margin-bottom: 0;" class="dates">Пн-Пт: 10.00 - 20.00</p>
+        <p class="dates">Сб-Вс: 10.00 - 17.00<br/><br/>
             <span class="prefooter">Если вы оставите заявку в другое время, мы обязятельно перезвоним в рабочее время офиса</span>
         </p>
     </div>
@@ -232,12 +233,12 @@
         <p class="f-text1 box">ООО «МАКИНТУР» <br/>
             ЕГРПОУ: 36480659 <br/>
             <a class="popmake-515" href="#">Платежная информация</a><br/>
-            моб. +38 096 595 01 01
+            моб. +38 096 711 01 01
         </p>
 
-        <p class="f-text2 box">г.&nbsp;Борисполь, <br/>
-            ул.&nbsp;Киевский шлях, 76-а, <br/>офис 97<br>
-            <span>e-mail:</span> info@makintour.com</p>
+        <p class="f-text2 box">г.&nbsp;Киев, <br/>
+            просп.&nbsp;Маяковского <span style="white-space:nowrap;">44-А</span>, <br/>«Sport Life» (Троещина)<br>
+            <span class="span-none">e-mail:</span> kiev2@makintour.com</p>
 
         <p class="f-text3 box">
             <a class="popmake-158 modal-link" href="#">Соглашение об обработке персональных данных.</a><br/>

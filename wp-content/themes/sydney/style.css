@@ -4454,7 +4454,7 @@ input[type="color"]:focus {
         width: 50% !important;
     }
 
-    .f-text2 span {
+    .f-text2 .span-none {
         display: none;
     }
 
@@ -5136,8 +5136,8 @@ input[type="color"]:focus {
 
     .content-area .entry-thumb .discount-amount {
         font-size: 18px;
-        right: 3%;
-        top: 6%;
+        right: 3% !important;
+        top: 5% !important;
     }
     #vk_groups {
         /*margin-left: -40px;*/
