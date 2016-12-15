@@ -227,8 +227,8 @@ AND pmet.meta_value = p.id";
                 $count_for_price_total_result = count($goods_min_price_total);
 //                $goods_min_price_total = array_slice($goods_min_price_total,0,8);
                 for ($i = 0; $i <= $count_for_price_total_result * 10; $i++) {
-//                    echo $goods_min_price_total[$i]['post_title'];
-                    if (($goods_min_price_total[$i]['post_title'] == 'ОАЕ')
+                     //default list of countries on main page
+                    if (($goods_min_price_total[$i]['post_title'] == 'ОАЭ')
                         || ($goods_min_price_total[$i]['post_title'] == 'Шри-Ланка')
                         || ($goods_min_price_total[$i]['post_title'] == 'Таиланд')
                         || ($goods_min_price_total[$i]['post_title'] == 'Египет')
@@ -254,6 +254,10 @@ AND pmet.meta_value = p.id";
         if ($_GET['sort_id']) {
             $id = strip_tags($_GET['sort_id']);
             $goods = get_goods($db, $id);
+            //$goods is empty?
+            if(count($goods) == 0) {
+                $goods = get_goods($db, 'Все страны');
+            }
             foreach ($goods as $item) {
                 ?>
                 <article class="post type-post status-publish format-standard has-post-thumbnail hentry">
