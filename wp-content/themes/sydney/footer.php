@@ -57,8 +57,8 @@
             <div class="team-info">
                 <h3>Иванченко Елена</h3>
 
-                <p class="team-tel">+38 096 711-01-01<br><span style="font-size: 12px"></span></p>
-                <p class="team-tel" style="background-image: url('/wp-content/themes/sydney/img/skype-icon-for-manager.png');">makintour-kiev2<br></p>
+                <p class="team-tel" style="background-image: url('/wp-content/themes/sydney/img/telephone-icon-for-manager.png') !important;">+38 096 711-01-01<br><span style="font-size: 12px"></span></p>
+                <p class="team-tel" style="background-image: url('/wp-content/themes/sydney/img/skype-icon-for-manager.png')">makintour-kiev2<br></p>
                 <!--<p class="viber-whatsapp"><span>(Viber, WhatsApp)</span> +38 099 213-95-55</p>-->
 
                 <p class="team-mail">kiev2@makintour.com</p>
@@ -78,7 +78,7 @@
             <div class="team-info">
                 <h3>Богуцкая Татьяна</h3>
 
-                <p class="team-tel">+38 096 711-01-01<br><span style="font-size: 12px"></span></p>
+                <p class="team-tel" style="background-image: url('/wp-content/themes/sydney/img/telephone-icon-for-manager.png') !important;">+38 096 711-01-01<br><span style="font-size: 12px"></span></p>
                 <p class="team-tel" style="background-image: url('/wp-content/themes/sydney/img/skype-icon-for-manager.png');">makintour-kiev2<br></p>
                 <!--<p class="viber-whatsapp"><span>(Viber, WhatsApp)</span> +38 099 213-95-55</p>-->
 
@@ -97,7 +97,7 @@
             <div class="team-info">
                 <h3>Мороз Наталья</h3>
 
-                <p class="team-tel">+38 096 711-01-01<br><span style="font-size: 12px"><!--(Viber, WhatsApp)--></span></p>
+                <p class="team-tel" style="background-image: url('/wp-content/themes/sydney/img/telephone-icon-for-manager.png') !important;">+38 096 711-01-01<br><span style="font-size: 12px"><!--(Viber, WhatsApp)--></span></p>
                 <p class="team-tel" style="background-image: url('/wp-content/themes/sydney/img/skype-icon-for-manager.png');">makintour-kiev2<br></p>
                 <!--<p class="viber-whatsapp"><span>(Viber, WhatsApp)</span> +38 099 213-95-55</p>-->
 
