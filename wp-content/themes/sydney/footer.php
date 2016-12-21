@@ -120,7 +120,7 @@
     <img id="palmleft" src="/wp-content/themes/sydney/img/palmleft.png">
     <div class="grid">
         <p class="telephone2"><span>Есть вопрос по отдыху? С&nbsp;удовольствием поможем:</span>
-            +38 096 595 01 01</p>
+            +38 096 711 01 01</p>
         <h3> Время обработки заявок</h3>
         <p style="margin-bottom: 0;" class="dates">Пн-Пт: 10.00 - 20.00</p>
         <p class="dates">Сб-Вс: 10.00 - 17.00<br/><br/>
@@ -228,7 +228,7 @@
 
 <a class="go-top"><i class="fa fa-angle-up"></i></a>
 
-<footer id="colophon" class="site-footer" role="contentinfo">
+<footer itemscope itemtype="http://schema.org/WPFooter" id="colophon" class="site-footer" role="contentinfo">
     <div class="grid foot">
         <p class="f-text1 box">ООО «МАКИНТУР» <br/>
             ЕГРПОУ: 36480659 <br/>

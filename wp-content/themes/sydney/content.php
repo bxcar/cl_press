@@ -268,8 +268,41 @@ AND pmet.meta_value = p.id";
             }
             foreach ($goods as $item) {
                 ?>
-                <article class="post type-post status-publish format-standard has-post-thumbnail hentry">
+                <article itemscope itemtype="http://schema.org/BlogPosting" class="post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="http://coraltravel.kiev.ua"/> <!--Адрес главной страницы-->
+                    <meta itemprop="dateModified" content="<?php the_modified_time('Y-m-d')?>"/> <!--Дата последнего изменения-->
+
+                    <!--Разметка публикатора(адрес, логотип, название сайта)-->
+                    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display:none;">
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="streetAddress">просп. Маяковского 44-А</span>
+                            <span itemprop="postalCode">01001</span>
+                            <span itemprop="addressLocality">Украина, Киевская обл., г.Киев</span>
+                            <span itemprop="telephone">+38 096 711 01 01</span>
+                        </div>
+                        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                            <img itemprop="url" src="http://coraltravel.kiev.ua/wp-content/themes/sydney/img/logo_coral.png"/>
+                            <img itemprop="image" src="http://coraltravel.kiev.ua/wp-content/themes/sydney/img/logo_coral.png"/>
+                            <meta itemprop="width" content="100">
+                            <meta itemprop="height" content="43">
+                        </div>
+                        <meta itemprop="name" content="Coral Travel - г.Киев">
+                    </div>
+                    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" class="entry-thumb" style="display:none;">
+                        <meta itemprop="width" content="272">
+                        <meta itemprop="height" content="233">
+                        <img itemprop="url" src="<?php $item['guid'] ?>">
+                        <img itemprop="image" src="<?php $item['guid'] ?>">
+                    </div>
+                    <div itemscope itemtype="https://schema.org/ImageObject" style="display:none;">
+                        <img itemprop="image" src="<?php $item['guid'] ?>" >
+                    </div>
+
+                    <div class="meta-post" style="display: none">
+                        <?php sydney_posted_on(); ?>
+                    </div><!-- .entry-meta -->
                     <div class="entry-thumb">
+                        
                         <?php /*foreach ($goods as $item_in)
             {
             if ($item['id'] == $item_in['post_id']) { */ ?><!--
@@ -310,12 +343,12 @@ AND pmet.meta_value = p.id";
                     </div>
 
                     <header class="entry-header">
-                        <h2 class="title-post"><span id="country-title" class="country-title-class"
+                        <h2 itemprop="headline" class="title-post"><span id="country-title" class="country-title-class"
                                                      style="color: #0088e7;"
                                                      rel="bookmark"><?= $item['post_title'] ?> </span></h2>
                     </header><!-- .entry-header -->
 
-                    <div class="entry-post">
+                    <div itemprop="articleBody" class="entry-post">
                         <p><?= $item['post_content'] ?></p>
                     </div><!-- .entry-post -->
 
